@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>🔥🔥 MOTIVATE HO JA!!🔥🔥 </title>
+	<style>
+		* {font-size:50px;}
+		h1 {background-color:black; color:white; width:40%; border-radius:50px;}
+		body {background-color:lightblue;}
+		
+	</style>
+	<script>
+		function getmsg()
+		{
+			event.preventDefault();
+			let ans=document.getElementById("ans");
+			let url="https://api.quotable.io/random";
+			fetch(url)
+			.then(res => res.json())
+			.then(data => ans.innerHTML = data.content + " " + data.author)
+			.catch(err => ans.innerHTML = "issue" + err);
+
+		}
+	</script>
+	</head>
+
+	<body>
+	<center>
+		<h1> MOTIVATE YOURSELF</h1>
+		<h1>🔥🔥🔥🔥🔥🔥🔥🔥</h1>
+
+	<form onsubmit="getmsg()">
+		<input type="submit" value="LESGOO BOIII"/>
+	</form>
+		<h1 id="ans"></h1>
+		<h1>🔥🔥🔥🔥🔥🔥🔥🔥</h1>
+	</center>
+	</body>
+
+
